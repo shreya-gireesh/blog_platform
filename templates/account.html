@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .profilesection{
+      background-color: #fff;
+      border: 0!important;
+      height: fit-content;
+      padding: 10px;
+    }
+    .edit-btn{
+      position: relative;
+      left: 80%;
+      width: fit-content;
+    }
+    .blogsection{
+      border: 0!important;
+    }
+    .profile-pic{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+    .username{
+    text-transform: uppercase;
+    font-weight:700;
+  }
+    .blog-title{
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+    .card-body{
+       padding: 0 15px 15px 0 !important;
+    }
+    span{
+      padding: 0;
+    }
+    .icons{
+      position: relative;
+      left:95%;
+      margin-bottom: 5px;
+      font-size:10px!important;
+    }
+    .blog-date{
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+    .blog-img{
+      border-radius: 0.75rem;
+    }
+  </style>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/favicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>BlogSphere</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/bootstrap.css')}}" />
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename = 'css/style.css')}}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{{ url_for('static', filename = 'css/responsive.css')}}" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/4a30165663.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              BlogSphere
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link pl-lg-0" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('about') }}"> About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('blog') }}"> Blog </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
+              </li>
+            </ul>
+            <a href="">Login</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <section class="blog_section layout_padding">
+        <div class="container">
+            <div class="row">
+              <div class="profilesection card col-md-3" >
+                  <button class="btn edit-btn" style="color: #cecece;">
+                    <i class="fa-solid fa-pen" style="color: #cecece;"></i>Edit
+                  </button>
+                <div class="text-center">
+                  <img src="{{ url_for('static', filename = 'img/b2.jpg')}}" class="profile-pic" alt="">
+                  <h4 class="username card-title">Sam Xavier</h4>
+                </div>
+                <div>
+                  Through this platform, I aim to share insights, stories, and reflections on topics ranging from technology and innovation to personal growth and creativity.
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="blogsection card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="{{ url_for('static', filename = 'img/b1.jpg')}}" class="blog-img p-2 h-100 img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="blog-details col">
+                      <div class="card-body">
+                        <span class="icons">
+                          <button class="mr-2 btn fa-solid fa-pen" style="color: #cecece; font-size: 10px; padding:0;"></button>
+                          <button class="btn fa-solid fa-trash" style="color: #cecece; font-size: 10px; padding:0;"></button>
+                        </span>
+                        <h5 class="blog-title card-title" style="margin:0;">Card title</h5>
+                        <p class="blog-date text-muted">
+                          <span>May 3, 2023</span>
+                          <span>|</span>
+                          <span>TECH</span>
+                        </p>
+                        <p id="cardText" class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                          additional content. This content is a little bit longer.This is a wider card with supporting
+                          text below as a natural lead-in to additional content. This content is a little bit longer.This
+                          is a wider card with supporting text below as a natural lead-in to additional content.
+                          This content is a little bit longer.</p>
+                        <a href="{{ url_for('blog') }}">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blogsection card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="{{ url_for('static', filename = 'img/b1.jpg')}}" class="p-2 img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="blog-details col" style="padding: 0;">
+                      <div class="card-body">
+                        <span class="icons">
+                          <i class="fa-solid fa-pen" style="color: #cecece;"></i>
+                          <i class="fa-solid fa-trash" style="color: #cecece;"></i>
+                        </span>
+                        <h5 class="blog-title card-title">Card title</h5>
+                        <p class="blog-date text-muted">
+                          <span>May 3, 2023</span>
+                          <span>|</span>
+                          <span>TECH</span>
+                        </p>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blogsection card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="{{ url_for('static', filename = 'img/b1.jpg')}}" class="p-2 img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="blog-details col" style="padding: 0;">
+                      <div class="card-body">
+                        <span class="icons">
+                          <i class="fa-solid fa-pen" style="color: #cecece;"></i>
+                          <i class="fa-solid fa-trash" style="color: #cecece;"></i>
+                        </span>
+                        <h5 class="blog-title card-title">Card title</h5>
+                        <p class="blog-date text-muted">
+                          <span>May 3, 2023</span>
+                          <span>|</span>
+                          <span>TECH</span>
+                        </p>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info-col">
+          <div class="info_detail">
+            <h4>
+              About Us
+            </h4>
+            <p>
+              Vitae aut explicabo fugit facere alias distinctio, exem commodi mollitia minusem dignissimos atque asperiores incidunt vel voluptate iste
+            </p>
+            <div class="info_social">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info-col">
+          <div class="info_contact">
+            <h4>
+              Address
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +01 1234567890
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  demo@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info-col">
+          <div class="info_contact">
+            <h4>
+              Newsletter
+            </h4>
+            <form action="#">
+              <input type="text" placeholder="Enter email" />
+              <button type="submit">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info-col">
+          <div class="map_container">
+            <div class="map">
+              <div id="googleMap"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+  </div>
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">Free Html Templates</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="{{ url_for('static', filename = 'js/jquery-3.4.1.min.js')}}"></script>
+  <!-- bootstrap js -->
+  <script src="{{ url_for('static', filename = 'js/bootstrap.js')}}"></script>
+  <!-- custom js -->
+  <script src="{{ url_for('static', filename = 'js/custom.js')}}"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const wordLimit = 100; // Set your desired word limit here
+    const cardTextElement = document.getElementById('cardText');
+    const words = cardTextElement.textContent.split(' ');
+
+    if (words.length > wordLimit) {
+        const truncatedWords = words.slice(0, wordLimit);
+        cardTextElement.textContent = truncatedWords.join(' ') + '...';
+    }
+});
+
+</script>
+</body>
+
+</html>
